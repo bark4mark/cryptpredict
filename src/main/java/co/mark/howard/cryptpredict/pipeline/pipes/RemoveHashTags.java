@@ -4,11 +4,14 @@ import com.google.common.base.Strings;
 
 import co.mark.howard.cryptpredict.pipeline.Pipe;
 
-public class RemoveHashTags implements Pipe<String> {
-	private final int order;
+public class RemoveHashTags
+		extends
+		DefaultPipe
+		implements
+		Pipe<String> {
 
 	public RemoveHashTags(final int order) {
-		this.order = order;
+		super (order);
 	}
 
 	@Override
@@ -17,15 +20,4 @@ public class RemoveHashTags implements Pipe<String> {
 			return "";
 		return input.replaceAll("(\\s|\\A)#(\\w+)", "");
 	}
-
-	@Override
-	public int compareTo(Pipe<String> other) {
-		return (this.getOrder() > other.getOrder() ? -1 : (this.getOrder() == other.getOrder() ? 0 : 1));
-	}
-
-	@Override
-	public int getOrder() {
-		return this.order;
-	}
-
 }

@@ -1,8 +1,8 @@
-#CryptPredict
+# CryptPredict
 
 Using sentiment analysis to predict coins that will trend upwards.
 
-##What is done:
+## What is done:
 - Lists all coins
 - Twitter search implementation
 - Works out positive and negative sentences

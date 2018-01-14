@@ -1,4 +1,4 @@
-package co.mark.howard.cryptpredict;
+package co.mark.howard.cryptpredict.pipeline;
 
 import org.junit.Assert;
 import org.junit.Before;
